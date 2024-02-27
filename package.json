@@ -1,0 +1,32 @@
+{
+  "name": "food-app",
+  "version": "1.0.0",
+  "description": "food-app-with-react",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChanduSpace/food-app-with-react.git"
+  },
+  "keywords": [
+    "chandu"
+  ],
+  "author": "chandu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChanduSpace/food-app-with-react/issues"
+  },
+  "homepage": "https://github.com/ChanduSpace/food-app-with-react#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
