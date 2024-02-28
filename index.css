@@ -30,21 +30,20 @@
 }
 .restaurant-card {
   /*height: 20rem;
-    */
+  */
   width: 16rem;
   background-color: #f0f0f0;
   padding: 0.5rem;
   border-radius: 1rem;
-  transition: all linear 0.2s;
-
+  transition: all linear 0.1s;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  -webkit-transition: all linear 0.2;
-  -moz-transition: all linear 0.2;
-  -ms-transition: all linear 0.2;
-  -o-transition: all linear 0.2;
+  -webkit-transition: all linear 0.1s;
+  -moz-transition: all linear 0.1s;
+  -ms-transition: all linear 0.1s;
+  -o-transition: all linear 0.1s;
 }
 .body-container {
   padding: 1rem 3rem;
@@ -64,11 +63,11 @@
   margin: 0.5rem 1rem;
 }
 .restaurant-card:hover {
-  transform: scale(1.02);
-  -webkit-transform: scale(1.02);
-  -moz-transform: scale(1.02);
-  -ms-transform: scale(1.02);
-  -o-transform: scale(1.02);
+  transform: scale(0.98);
+  -webkit-transform: scale(0.98);
+  -moz-transform: scale(0.98);
+  -ms-transform: scale(0.98);
+  -o-transform: scale(0.98);
 }
 .restaurant-container {
   display: flex;
