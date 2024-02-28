@@ -1,19 +1,29 @@
 import { CDN_URL } from "../utils/constants";
+import { RATING_LOGO } from "../utils/constants";
 
 const RestaurantCard = (props) => {
-  console.log(props);
-  console.log(props.restaurantData.name);
   const { restaurantData } = props;
-  const { name, cuisines, cloudinaryImageId, avgRating, deliveryTime } =
-    restaurantData?.info;
+  const {
+    name,
+    cuisines,
+    cloudinaryImageId,
+    avgRating,
+    deliveryTime,
+    areaName,
+  } = restaurantData?.info;
 
   return (
     <div className="restaurant-card">
-      <img src={CDN_URL + cloudinaryImageId} />
+      <img className="restaurant-img" src={CDN_URL + cloudinaryImageId} />
       <h3 className="line-clamp">{name}</h3>
-      <h4 className="line-clamp">{cuisines.join(", ")}</h4>
-      <h4>{avgRating}</h4>
-      <h4>{restaurantData.info.sla.deliveryTime + " minutes"}</h4>
+      <div className="rating-and-logo">
+        <img className="rating-logo" src={RATING_LOGO} />
+        <h4>
+          {avgRating} • {restaurantData.info.sla.slaString}
+        </h4>
+      </div>
+      <h4 className="line-clamp light-font">{cuisines.join(", ")}</h4>
+      <h4 className="line-clamp light-font">{areaName}</h4>
     </div>
   );
 };

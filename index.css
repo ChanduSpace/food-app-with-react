@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .header {
@@ -35,20 +36,20 @@
   background-color: #f0f0f0;
   padding: 0.5rem;
   border-radius: 1rem;
-  transition: all linear 0.1s;
+  transition: all linear 0.05s;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
-  -webkit-transition: all linear 0.1s;
-  -moz-transition: all linear 0.1s;
-  -ms-transition: all linear 0.1s;
-  -o-transition: all linear 0.1s;
+  -webkit-transition: all linear 0.05s;
+  -moz-transition: all linear 0.05s;
+  -ms-transition: all linear 0.05s;
+  -o-transition: all linear 0.05s;
 }
 .body-container {
   padding: 1rem 3rem;
 }
-.restaurant-card img {
+.restaurant-img {
   width: 15rem;
   height: 11rem;
   border-radius: 1rem;
@@ -58,16 +59,16 @@
   -ms-border-radius: 1rem;
   -o-border-radius: 1rem;
 }
-.restaurant-card h3,
-.restaurant-card h4 {
-  margin: 0.5rem 1rem;
+
+.light-font {
+  font-weight: 300;
 }
 .restaurant-card:hover {
-  transform: scale(0.98);
-  -webkit-transform: scale(0.98);
-  -moz-transform: scale(0.98);
-  -ms-transform: scale(0.98);
-  -o-transform: scale(0.98);
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
 }
 .restaurant-container {
   display: flex;
@@ -82,4 +83,20 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  margin: 0 1rem;
+}
+
+.rating-and-logo {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 0 1rem;
+  gap: 2px;
+}
+
+.rating-logo {
+  height: 16px;
+}
+.rating-and-logo h4 {
+  font-weight: 500;
 }
