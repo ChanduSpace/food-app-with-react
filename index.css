@@ -100,3 +100,78 @@
 .rating-and-logo h4 {
   font-weight: 500;
 }
+.shimmer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.shimmer-card {
+  height: 300px;
+  width: 256px;
+  background-color: #f0f0f0;
+  border-radius: 1rem;
+  position: relative;
+}
+.img-shimmer {
+  position: absolute;
+  width: 14.4rem;
+  height: 11rem;
+  top: 0.8rem;
+  left: 0.8rem;
+  background-color: #e1e1e1;
+  border-radius: 1rem;
+}
+.text-shimmer1 {
+  position: absolute;
+  top: 12.3rem;
+  left: 0.8rem;
+  height: 2rem;
+  width: 13rem;
+  background-color: #e1e1e1;
+  border-radius: 0.7rem;
+}
+.text-shimmer2 {
+  position: absolute;
+  top: 15rem;
+  left: 0.8rem;
+  height: 2rem;
+  width: 10rem;
+  background-color: #e1e1e1;
+  border-radius: 0.7rem;
+}
+.shine {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    100deg,
+    rgba(225, 225, 225, 0) 20%,
+    rgba(244, 244, 244, 0.5) 50%,
+    rgba(225, 225, 225, 0) 80%
+  );
+  animation: shimmer 0.8s infinite linear;
+  -webkit-animation: shimmer 0.8s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-60%);
+    -webkit-transform: translateX(-60%);
+    -moz-transform: translateX(-60%);
+    -ms-transform: translateX(-60%);
+    -o-transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+}
