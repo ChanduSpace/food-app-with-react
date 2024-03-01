@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
   let [restaurantList, setRestaurantList] = useState([]);
@@ -22,6 +23,10 @@ const Body = () => {
     );
     setFilteredRes(
       jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+    );
+    console.log(
+      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants[0]
+        .info.id
     );
   };
 
@@ -50,7 +55,7 @@ const Body = () => {
             const filteredList = restaurantList.filter(
               (res) => res.info.avgRating > 4.2
             );
-            setRestaurantList(filteredList);
+            setFilteredRes(filteredList);
           }}
         >
           Top Rated Restaurant
@@ -58,10 +63,13 @@ const Body = () => {
       </div>
       <div className="restaurant-container">
         {filteredRes.map((restaurant) => (
-          <RestaurantCard
+          <Link
+            className="text-decor"
+            to={"/restaurant/" + restaurant.info.id}
             key={restaurant.info.id}
-            restaurantData={restaurant}
-          />
+          >
+            <RestaurantCard restaurantData={restaurant} />
+          </Link>
         ))}
       </div>
     </div>

@@ -175,3 +175,59 @@
     -o-transform: translateX(100%);
   }
 }
+
+/* //// */
+.restaurant-page-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  /* background-color: aqua; */
+}
+.res-info-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  width: 50%;
+  /* background-color: beige; */
+  border-bottom: 1px solid #9d9c9c;
+}
+.res-items-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #9d9c9c;
+}
+.item-info {
+  width: 70%;
+}
+.item-info p {
+  text-wrap: wrap;
+}
+.item-img-container img {
+  width: 8.5rem;
+  height: 6rem;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.item-info img {
+  height: 1.5rem;
+}
+.items-container {
+  width: 50%;
+}
+.class-text {
+  padding-left: 1rem;
+}
+.description {
+  font-size: 12px;
+}
+.text-decor {
+  text-decoration: none;
+  color: black;
+}
