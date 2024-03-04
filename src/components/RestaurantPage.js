@@ -9,6 +9,7 @@ const RestaurantPage = () => {
   const [recommendedMenu, setRecommendedMenu] = useState([]);
   const { resId } = useParams();
 
+  const [allMenu, setAllMenu] = useState(null);
   useEffect(() => {
     fetchMenuData();
   }, []);
@@ -16,13 +17,14 @@ const RestaurantPage = () => {
   const fetchMenuData = async () => {
     const data = await fetch(ITEM_MENU_URL + resId);
     const recomMenuJson = await data.json();
-    console.log(recomMenuJson);
 
     setResMenuInfo(recomMenuJson.data);
     setRecommendedMenu(
       recomMenuJson.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card
         .card.itemCards
     );
+
+    setAllMenu(recomMenuJson.data.cards[2].groupedCard.cardGroupMap.REGULAR);
   };
 
   if (resMenuInfo === null) {
@@ -41,8 +43,11 @@ const RestaurantPage = () => {
 
   const { slaString } = resMenuInfo.cards[0].card.card.info.sla;
 
-  console.log(resMenuInfo);
-  console.log(recommendedMenu);
+  const onlyAllMenu = allMenu.cards.filter(
+    (e) =>
+      e.card.card?.["@type"] ===
+      "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  );
 
   return (
     <div className="restaurant-page-container">
@@ -62,9 +67,8 @@ const RestaurantPage = () => {
       </div>
 
       <div className="items-container">
-        <h3 className="class-text">Recommended</h3>
-        {recommendedMenu.map((item) => (
-          <MenuItems key={item.card.info.id} itemInfo={item} />
+        {onlyAllMenu.map((item) => (
+          <MenuItems key={item.card.card.title} itemInfo={item} />
         ))}
       </div>
     </div>
