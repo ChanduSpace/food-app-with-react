@@ -7,3 +7,9 @@ export const RATING_LOGO =
 
 export const ITEM_MENU_URL =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.37240&lng=78.43780&restaurantId=";
+
+export const NON_VEG_IMG =
+  "https://www.clipartmax.com/png/full/277-2772681_non-veg-symbol-non-veg-mark.png";
+
+export const VEG_IMG =
+  "https://www.clipartmax.com/png/full/299-2998556_vegetarian-food-symbol-icon-non-veg-symbol-png.png";
