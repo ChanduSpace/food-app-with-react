@@ -204,8 +204,8 @@
   text-wrap: wrap;
 }
 .item-img-container img {
-  width: 10rem;
-  height: 7rem;
+  width: 8.5rem;
+  height: 6rem;
   border-radius: 0.5rem;
   object-fit: cover;
   -webkit-border-radius: 0.5rem;
@@ -245,4 +245,8 @@
   justify-content: space-between;
   align-items: center;
   padding-right: 2rem;
+}
+
+.c{
+  nothing just push
 }
