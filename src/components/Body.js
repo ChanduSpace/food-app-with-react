@@ -19,14 +19,12 @@ const Body = () => {
     );
     const jsonData = await data.json();
     setRestaurantList(
-      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
     setFilteredRes(
-      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
-    );
-    console.log(
-      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants[0]
-        .info.id
+      jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants
     );
   };
 
@@ -43,7 +41,7 @@ const Body = () => {
         <button
           onClick={() => {
             const filteredRestaurant = restaurantList.filter((res) =>
-              res.info.name.toLowerCase().includes(searchValue.toLowerCase())
+              res?.info?.name.toLowerCase().includes(searchValue.toLowerCase())
             );
             setFilteredRes(filteredRestaurant);
           }}

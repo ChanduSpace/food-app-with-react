@@ -13,8 +13,6 @@ const RestaurantCard = (props) => {
     id,
     key,
   } = restaurantData?.info;
-  console.log(id);
-  console.log(id);
 
   return (
     <div className="restaurant-card">

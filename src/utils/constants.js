@@ -13,3 +13,6 @@ export const NON_VEG_IMG =
 
 export const VEG_IMG =
   "https://www.clipartmax.com/png/full/299-2998556_vegetarian-food-symbol-icon-non-veg-symbol-png.png";
+
+export const NO_IMG =
+  "https://www.food4fuel.com/wp-content/uploads/woocommerce-placeholder-300x300.png";
