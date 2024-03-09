@@ -181,14 +181,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* background-color: aqua; */
 }
 .res-info-container {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   width: 50%;
-  /* background-color: beige; */
   border-bottom: 1px solid #9d9c9c;
 }
 .res-items-container {

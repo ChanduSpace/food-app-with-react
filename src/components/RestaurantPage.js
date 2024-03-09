@@ -20,11 +20,11 @@ const RestaurantPage = () => {
 
     setResMenuInfo(recomMenuJson.data);
     setRecommendedMenu(
-      recomMenuJson.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[1].card
-        .card.itemCards
+      recomMenuJson.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR.cards[1]
+        ?.card?.card?.itemCards
     );
 
-    setAllMenu(recomMenuJson.data.cards[2].groupedCard.cardGroupMap.REGULAR);
+    setAllMenu(recomMenuJson.data.cards[2]?.groupedCard?.cardGroupMap?.REGULAR);
   };
 
   if (resMenuInfo === null) {
@@ -68,7 +68,7 @@ const RestaurantPage = () => {
 
       <div className="items-container">
         {onlyAllMenu.map((item) => (
-          <MenuItems key={item.card.card.title} itemInfo={item} />
+          <MenuItems key={item?.card?.card?.title} itemInfo={item} />
         ))}
       </div>
     </div>
