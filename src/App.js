@@ -7,15 +7,19 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Contact from "./components/contact";
 import Error from "./components/Error";
 import RestaurantPage from "./components/RestaurantPage";
+import store from "./utils/store";
+import { Provider } from "react-redux";
 
 const About = lazy(() => import("./components/About"));
 
 const AppLayout = () => {
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    <Provider store={store}>
+      <div className="app">
+        <Header />
+        <Outlet />
+      </div>
+    </Provider>
   );
 };
 

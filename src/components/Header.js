@@ -1,9 +1,12 @@
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const onlineStatus = useOnlineStatus();
+
+  const cartItems = useSelector((store) => store.cart.items);
   return (
     <div className="header">
       <div className="logo-container">
@@ -28,6 +31,12 @@ const Header = () => {
               Contact Us
             </Link>
           </li>
+          <li>
+            <Link className="text-decor" to="/">
+              <h5>Cart-({cartItems.length} items)</h5>
+            </Link>
+          </li>
+
           <li>Login</li>
         </ul>
       </div>
