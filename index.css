@@ -213,10 +213,27 @@
   padding: 4px 8px;
   border: solid grey 1px;
   border-radius: 18%;
+  transition: all 0.05s ease;
   -webkit-border-radius: 18%;
   -moz-border-radius: 18%;
   -ms-border-radius: 18%;
   -o-border-radius: 18%;
+  -webkit-transition: all 0.05s ease;
+  -moz-transition: all 0.05s ease;
+  -ms-transition: all 0.05s ease;
+  -o-transition: all 0.05s ease;
+}
+.add-btn:hover {
+  background-color: green;
+  color: white;
+}
+.add-btn:active {
+  opacity: 0.9;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
 }
 .item-img-container img {
   width: 8.5rem;
