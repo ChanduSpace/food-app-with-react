@@ -279,3 +279,7 @@
   padding-right: 2rem;
   cursor: pointer;
 }
+.cart-item-container {
+  width: 50%;
+  margin: 0 auto;
+}

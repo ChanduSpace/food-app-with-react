@@ -7,6 +7,7 @@ const Header = () => {
   const onlineStatus = useOnlineStatus();
 
   const cartItems = useSelector((store) => store.cart.items);
+  console.log(cartItems);
   return (
     <div className="header">
       <div className="logo-container">
@@ -32,7 +33,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link className="text-decor" to="/">
+            <Link className="text-decor" to="/cart">
               <h5>Cart-({cartItems.length} items)</h5>
             </Link>
           </li>
